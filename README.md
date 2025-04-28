@@ -1,4 +1,28 @@
-Pre requite-
+
+# Project Title
+
+
+## Description
+Karate API and UI Project with api performance integration
+
+## Table of Contents
+- Installation - vs code, home brew, maven, java
+- Usage - api and ui testing 
+- Contributing
+- License
+
+
+## Installation
+Install VS code
+Install home brew
+Install maven
+Install Java
+
+## Usage
+You can perform api and ui testing and also check performance of api's.
+
+
+Pre requisite-
 vs code
 home brew
 maven - mvn -version
