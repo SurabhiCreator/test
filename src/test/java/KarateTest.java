@@ -19,11 +19,28 @@ class KarateTest {
         Results results = Runner.path("classpath:tests/sample.feature")
                 .outputCucumberJson(true)
                 .parallel(1);
+      
         System.out.println("Karate output dir: " + results.getReportDir());
         listOutputFiles(results.getReportDir());
+      
         generateReport(results.getReportDir());
         assertEquals(0, results.getFailCount(), results.getErrorMessages());
     }
+
+    @Test
+
+    void runKarateUITests() {
+        Results results = Runner.path("classpath:ui/google.feature")
+                .outputCucumberJson(true)
+                .parallel(1);
+      
+        System.out.println("Karate UI output dir: " + results.getReportDir());
+        listOutputFiles(results.getReportDir());
+        
+        generateReport(results.getReportDir());
+        assertEquals(0, results.getFailCount(), results.getErrorMessages());
+    }
+
     private void listOutputFiles(String dirPath) {
         File[] allFiles = new File(dirPath).listFiles();
         System.out.println("Files in output dir:");
